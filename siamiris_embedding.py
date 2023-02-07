@@ -56,18 +56,13 @@ class siamiris_embedding(object):
         embedding = self.model.predict(dummy_image, verbose=0)
         return
 
-    def process_image(self, image, *preprocessing):
+    def process_image(self, image):
         """Resample and process the input image.
 
         Parameters
         ----------
         image : numpy.ndarray
             Input image.
-        preprocessing : function, optional
-            Any number of preprocessing functions as positional arguments. They can also
-            be contained in a sequence or collection, but must be unpacked in the
-            function call. Each function must receive a NumPy array as argument, and
-            output a NumPy array of the same rank.
 
         Returns
         -------
@@ -76,15 +71,11 @@ class siamiris_embedding(object):
         """
         if image.shape[:2] != self.input_size[::-1]:
             image = cv.resize(image, self.input_size)
-        for function in preprocessing:
-            image = function(image)
 
         return image
 
     def get_embedding(self, image):
-        """Infer the class of the input image. The image to be classified must first be
-        processed using the process_image() function. The image is reshaped and
-        normalized before inference.
+        """Get embedding of an imput image.
 
         Parameters
         ----------
@@ -94,7 +85,7 @@ class siamiris_embedding(object):
         Returns
         -------
         numpy.ndarray
-            Confidence scores vector.
+            Embedding or feature vector.
         """
         if len(image.shape) < 3:
             image = np.expand_dims(image, axis=-1)
@@ -106,6 +97,20 @@ class siamiris_embedding(object):
         return embedding[0]
 
     def compare(self, emb1, emb2):
+        """Compute distance between two embeddings.
+
+        Parameters
+        ----------
+        emb1 : numpy.ndarray
+            Embedding 1.
+        emb2 : numpy.ndarray
+            Embedding 2.
+
+        Returns
+        -------
+        dist: float
+            distance.
+        """
         if self.distance in ['euclidean', 'L2']:
             dist = np.linalg.norm(emb1 - emb2, axis=0)
         elif self.distance == 'cosine':
