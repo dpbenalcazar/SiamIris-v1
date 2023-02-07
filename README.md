@@ -34,7 +34,7 @@ Then, to get the embedding of an iris image, please use:
 
 ```python
 # Read iris image:
-iris = cv2.cvtColor(cv2.imread('./samples/L02463d1890.png'), cv2.COLOR_BGR2RGB)
+iris = cv2.cvtColor(cv2.imread('path/to/iris/image'), cv2.COLOR_BGR2RGB)
 
 # Image on correct format:
 iris = SiamIris.process_image(iris)
