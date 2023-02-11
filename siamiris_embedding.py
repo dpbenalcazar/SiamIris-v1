@@ -54,6 +54,7 @@ class siamiris_embedding(object):
     def warm_up(self):
         dummy_image = np.zeros((1,224,224,3))
         embedding = self.model.predict(dummy_image, verbose=0)
+        self.embedding_size = len(embedding[0])
         return
 
     def process_image(self, image):

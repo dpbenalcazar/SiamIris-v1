@@ -2,3 +2,4 @@ tensorflow>=2.2.0
 opencv-python>=4.5.3
 numpy>=1.19.2
 jupyter
+matplotlib
