@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ## Model's Weights
 The best results were obtained with the ResNet50 backbone and using periocular iris images a the input. This has the advantage of not needing segmentation nor localization for the Iris recognition Pipeline.
 
-The weights can be downloaded from this link (upon uploading); however, the password must be solicited to the author's emails:
+The weights can be downloaded from [this link]( https://www.dropbox.com/s/lk9ctfgjte0yv5l/weights-SiamIris.zip?dl=0); however, the password must be solicited to the author's emails:
 
 - Daniel Benalcazar: dbenalcazar@ug.uchile.cl
 - Juan Tapia: juan.tapia-farias@h-da.de
