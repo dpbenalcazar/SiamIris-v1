@@ -4,6 +4,8 @@ This is the repository of the research work: **SiamIris: An Open Source Siamese 
 - IEEE version of the paper is available here (upon approval)
 - ArXiv version can be found here (upon submission)
 
+![alt text](./assets/SiamIris_figures.png?raw=true)
+
 ## Requirements
 This repo works with TensorFlow 2, and was tested on versions 2.2, 2.4 and 2.9. To install all the requirements please use:
 
