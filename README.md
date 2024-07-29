@@ -21,10 +21,10 @@ The weights can be downloaded from [this link]( https://www.dropbox.com/s/lk9ctf
 - Juan Tapia: juan.tapia-farias@h-da.de
 - Daniel Benalcazar: dbenalcazar@ug.uchile.cl
 
-Please unzip the file and place the folder **weights/** on the root folder of this repo.
+Please unzip the file and place the **weights/** folder on the root folder of this repo.
 
 ## How to use
-Use following code to initialize the model. You must specify if the backbone is **'renet50'** or **'mobilenetv2'**.
+Use following code to initialize the model. You must specify if the backbone is **'resnet50'** or **'mobilenetv2'**.
 
 ```python
 from siamiris_embedding import siamiris_embedding

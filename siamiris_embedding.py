@@ -39,10 +39,10 @@ class siamiris_embedding(object):
 
         if self.backbone == 'mobilenetv2':
             self._preprocessor = mobilenet_v2.preprocess_input
-            modelpath = '/home/daniel/GitHub/SiamIris-v1/weights/SiamIris-MN2-iris/'
+            modelpath = './weights/SiamIris-MN2-iris-T10/best_model/'
         elif self.backbone == 'resnet50':
             self._preprocessor = resnet50.preprocess_input
-            modelpath = '/home/daniel/GitHub/SiamIris-v1/weights/SiamIris-R50-iris/'
+            modelpath = './weights/SiamIris-R50-iris-T15/best_model/'
         else:
             raise ValueError('Backbone %s is currently not supported' % self.backbone)
 
