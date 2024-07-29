@@ -1,5 +1,5 @@
 # SiamIris-v1
-This is the repository of the research work: **SiamIris: An Open Source Siamese Network for Iris Recognition**.
+This is the repository of the research work: **On the Feasibility to Create  Iris Periocular Morphed Images.**.
 
 - IEEE version of the paper is available here (upon approval)
 - ArXiv version can be found here (upon submission)
@@ -18,8 +18,8 @@ The best results were obtained with the ResNet50 backbone and using periocular i
 
 The weights can be downloaded from [this link]( https://www.dropbox.com/s/lk9ctfgjte0yv5l/weights-SiamIris.zip?dl=0); however, the password must be solicited to the author's emails:
 
-- Daniel Benalcazar: dbenalcazar@ug.uchile.cl
 - Juan Tapia: juan.tapia-farias@h-da.de
+- Daniel Benalcazar: dbenalcazar@ug.uchile.cl
 
 Please unzip the file and place the folder **weights/** on the root folder of this repo.
 
